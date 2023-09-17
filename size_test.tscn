@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://biogu0nlo2ysb"]
+
+[ext_resource type="Script" path="res://size_test.gd" id="1_5flyf"]
+
+[node name="SizeTest" type="MarginContainer"]
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+script = ExtResource("1_5flyf")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2

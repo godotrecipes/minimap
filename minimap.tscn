@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://bt76slcb5awbu"]
+
+[ext_resource type="Script" path="res://minimap.gd" id="1_8wnx2"]
+[ext_resource type="Texture2D" uid="uid://cq7bl56536exf" path="res://assets/panel_woodDetail_blank.png" id="1_23s65"]
+[ext_resource type="Texture2D" uid="uid://bikdfyvvw5oag" path="res://assets/pattern_blueprintPaper.png" id="2_u1e1s"]
+[ext_resource type="Texture2D" uid="uid://bn1rrxajfedmo" path="res://assets/minimapIcon_arrowA.png" id="3_q0vdd"]
+[ext_resource type="Texture2D" uid="uid://bm30ksnske3e1" path="res://assets/minimapIcon_jewelRed.png" id="4_k3l5f"]
+[ext_resource type="Texture2D" uid="uid://76t51rghfsgj" path="res://assets/minimapIcon_exclamationYellow.png" id="5_kxi43"]
+
+[node name="Minimap" type="MarginContainer"]
+offset_right = 250.0
+offset_bottom = 250.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+script = ExtResource("1_8wnx2")
+
+[node name="Frame" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_23s65")
+patch_margin_left = 64
+patch_margin_top = 64
+patch_margin_right = 64
+patch_margin_bottom = 64
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Grid" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_u1e1s")
+stretch_mode = 1
+
+[node name="PlayerMarker" type="Sprite2D" parent="MarginContainer/Grid"]
+position = Vector2(86, 86)
+texture = ExtResource("3_q0vdd")
+
+[node name="MobMarker" type="Sprite2D" parent="MarginContainer/Grid"]
+visible = false
+position = Vector2(37, 40)
+texture = ExtResource("4_k3l5f")
+
+[node name="AlertMarker" type="Sprite2D" parent="MarginContainer/Grid"]
+visible = false
+position = Vector2(112, 107)
+texture = ExtResource("5_kxi43")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
