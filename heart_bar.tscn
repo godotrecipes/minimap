@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://sk4bl31of7it"]
 
-[ext_resource type="Script" path="res://heart_bar.gd" id="1_cjvck"]
+[ext_resource type="Script" uid="uid://bfm4nbw6eq5nt" path="res://heart_bar.gd" id="1_cjvck"]
 [ext_resource type="Texture2D" uid="uid://b2021m666jtld" path="res://assets/hud_heartFull.png" id="1_j28cq"]
 
 [node name="HeartBar" type="HBoxContainer"]
